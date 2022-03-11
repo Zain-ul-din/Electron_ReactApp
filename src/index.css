@@ -1,0 +1,824 @@
+
+/*    Global */
+
+* { padding: 0; margin: 0; }
+html, body{
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+    max-height: 100vh;
+    min-height: 100% !important;
+    height: 100%;
+    box-sizing:border-box;
+    color: black;
+}
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 1px solid #555555;
+}
+
+
+#rootElement{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/*    Main App Style */
+
+.StyleMainDiv{
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  background-color: rgb(250, 246, 246);
+}
+
+.ActiveNavBtn{
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: black;
+  z-index: 100;
+}
+
+.UnActiveNavBtn{
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.301) !important;
+  z-index: 100;
+}
+
+/*  Nav Bar Style */
+
+.NavDiv{
+  visibility:visible;
+  transition: all .4s ease-out;
+  display: flex;
+  opacity: 100%;
+  margin-left: 0px;
+  width: 25%;
+  max-width: 15%;
+  height: 100%;
+  align-self: flex-start;
+  border-right: 1px solid rgba(208,215,222,0.48);
+  background: white !important;
+}
+
+.CopyRightText{
+  font-size: 12px !important;
+}
+
+@media (max-width: 1000px) {
+  .NavDiv{
+    max-width: 45%;
+  }
+  .companyName{
+    font-size: 14px !important;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .companyName{
+    font-size: 14px !important;
+  }
+  .CopyRightText{
+    font-size: 8px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .companyName{
+    font-size: 10px !important;
+  }
+  .CopyRightText{
+    font-size: 7px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .companyName{
+    font-size: 8px !important;
+  }
+  .CopyRightText{
+    font-size: 6px !important;
+  }
+}
+
+.companyName{
+  font-size: 1rem;
+}
+
+.btn-Custom{
+  background: white;
+  outline: none;
+  border: none;
+  align-self: flex-end;
+}
+
+.NavBarBtnContainer{
+   display: flex;
+   width: 100%;
+   height: 100%;
+   flex-direction: column;
+
+}
+
+
+
+.NavBtn{
+  width: 80%;
+  height: 5%;
+  margin-bottom: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow: nowrap;
+  border-bottom: 2px solid rgba(208,215,222,0.48);
+  margin-right: 10%;
+  text-shadow: 0 0 3px rgb(208, 215, 222);
+}
+
+.NavBtn:hover{
+  border-radius: 0;
+  background: #f6f8fa;
+  opacity: 85%;
+  border: 2px solid rgba(208,215,222,0.48);
+}
+
+.activeNavBtn{
+  border-radius: 0;
+  background: #f6f8fa;
+  opacity: 90%;
+  border: 2px solid rgba(208,215,222,0.48);
+  border-left: 3px solid #4caf50;
+}
+
+.activeNavBtn:hover{
+  border-radius: 0;
+  background: #f6f8fa;
+  opacity: 80%;
+  border: 2px solid rgba(208,215,222,0.48);
+  border-left: 3px solid #4caf50;
+
+}
+
+.staticNavHeader{
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 6%;
+  font-weight: bold;
+  color: rgb(240, 235, 235);
+  padding-left: 5%;
+  padding-top: 5%;
+  border-bottom:  1px solid rgba(208,215,222,0.48);
+  box-shadow: 1px 1px 10px 2px rgba(208,215,222,0.48);
+  margin-bottom: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
+  opacity: 90%;
+}
+
+.staticNavHeader:hover{
+  opacity: 50%;
+  cursor: default;
+  transition: all 2000ms ease-in-out;
+}
+
+/* Product From */
+
+.ProductDiv{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  justify-content: flex-end;
+}
+
+.MainAdminProductFormDiv{
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  overflow-y: scroll;
+  background: white;
+  border: 2px solid rgba(208,215,222,0.48);
+}
+
+.ProductFormDiv{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  padding-left: 10%;
+  background: white; /* Color */
+  padding-right: 20%;
+  padding-top: 5%;
+}
+
+.AdminMainNavBar{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.adminNavBarBtnActive{
+  border-top: 2px solid #52d552 !important;
+  opacity: 80%;
+}
+
+.ReactBtnFix{
+  pointer-events: none;
+}
+
+.InLineDiv{
+  display: flex;
+  margin-left: 10%;
+}
+
+.InputField{
+  outline: none;
+  border: 1px solid rgba(208, 215, 222, 0.99);
+  padding-left: 2%;
+}
+
+/* Drop Down Css */
+
+
+.dropDowncontainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fafafa;
+}
+
+.dropdown {
+  border: 1px solid rgba(208, 215, 222, 0.99);
+  position: relative;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 10%;
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 9000;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #333;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdown.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdown input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+
+}
+
+.dropdown .options {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+}
+
+.dropdown.active .options {
+  display: block;
+}
+
+.dropdown .options div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdown .options div:hover {
+  background: #b5d4e4;
+  color: #fff;
+}
+
+.newCatWrapper{
+  height: 1% !important;
+  transition: all 0.47s ease-in-out;
+}
+
+.NewCatWrapper{
+  height: 7% !important;
+  transition: all 0.47s ease-in-out;
+}
+
+.SubmitBtn {
+  outline: none;
+  border: 1px solid rgba(208, 215, 222, 0.52);
+  color: white;
+  background-color: #2196f3;
+  font-size: medium;
+}
+
+.SubmitBtn:hover {
+  outline: none;
+  border: 1px solid rgba(208, 215, 222, 0.52);
+  color: white;
+  background-color: #2196f3;
+  font-size: medium;
+  box-shadow: 1px 2px 2px 1px rgba(208, 215, 222, 0.95);
+}
+
+.ProductFormWrapperDiv{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border: 1px solid rgba(208, 215, 222, 0.52);
+  align-items: center;
+  background-color: #fcfcfc;
+  color: #333;
+  height: 7%;
+  flex-direction: column;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  padding-top: 1%;
+  box-shadow: 1px 1px 1px 1px rgba(208, 215, 222, 0.95);
+}
+
+.ProductFormWrapperDiv:hover{
+  transition: all 500ms ease-in-out;
+  background: rgba(232, 231, 231, 0.29);
+}
+
+.Border-Smart{
+  border: 1px solid rgba(208, 215, 222, 0.52);
+}
+
+/* Home Style */
+
+/* Product Card Style */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+.HomeWrapper{
+  width: 100%;
+  background-color: #ffffff;
+  max-height: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  justify-content: center;
+  margin-top : 2px;
+  margin-bottom: 10px;
+  border: 2px solid rgba(208,215,222,0.48);
+  box-shadow: 0px 0px 10px -6px #222;
+}
+
+.HomeWrapper:hover{
+  background: rgba(232, 231, 231, 0.29);
+  transition: all 1000ms ease-in-out;
+}
+
+.ProductSelectionHeader{
+  color: black;
+  margin-top: 2%;
+}
+
+.ProductSelectionHeader:hover{
+  color: rgba(0, 0, 0, 0.603);
+  margin-top: 2%;
+  cursor: default;
+}
+
+@media (max-width : 1000px){
+  .HomeWrapper{
+    width: 100%;
+    background-color: #ffffff;
+    max-height: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+  }
+}
+
+.CardWrapper{
+  background-color: rgb(255, 255, 255);
+  max-width: 210px;
+  max-height: 250px;
+  border: 2px solid rgba(208, 215, 222, 0.67);
+  padding: 0;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: -1px -1px 20px 1px rgba(208, 215, 222, 0.67);
+}
+
+.CardWrapperImage{
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+
+.CardWrapper p{
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  height: 15%;
+  border-bottom: 1px solid rgba(208, 215, 222, 0.67);
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 0px;
+}
+
+.AddBtnCard{
+  justify-self: center;
+  align-self: center;
+  margin-top: 0px;
+  height: 22% !important;
+  border: 1px solid white !important;
+}
+
+.AddBtnCard:hover{
+  opacity: 80% !important;
+}
+
+
+/* Main Home Style */
+
+.MainHomeDiv {
+  display: flex;
+  width: 100%;
+  max-height: 100vh;
+  background-color: white;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+/* Invoice Style */
+
+.InvoiceContainer{
+  margin-top: 1%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  justify-content: flex-start;
+  flex-direction: row;
+  overflow-y: scroll;
+}
+
+.ReceiptContainer{
+  margin-top: 1%;
+  width: 100%;
+  padding: 2%;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+
+.InvoiceInput{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 2%;
+}
+
+
+
+.InvoiceInput input{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  direction: rtl;
+  padding-right: 1%;
+  padding-bottom: 1%;
+}
+
+.InvoiceInputDate{
+  width: 100%;
+  padding: 1%;
+  
+}
+
+/*  Table */
+
+.TablecontrolBtn{
+  width: 30px  !important;
+  height: 30px  !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TableMargin{
+  width: auto;
+  height: auto;
+  display: flex;
+  border: 1px solid rgba(0, 0, 255, 0);
+}
+
+table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+  border: 1px solid black;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: rgb(255, 255, 255); 
+  border: 1px solid black;
+}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+  border: 1px solid black;
+}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+  border: 1px solid black;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+      border: 1px solid black;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+    border: 1px solid black;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+    border: 1px solid black;
+	}
+	
+	tr { border: 1px solid rgb(10, 10, 10); }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid rgb(0, 0, 0); 
+		position: relative;
+		padding-left: 50%; 
+    border: 1px solid black;
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+        border: 1px solid black;
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+
+/* Edit products */
+
+.EditProductsDiv{
+  background: white;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border:2px solid rgba(208,215,222,0.48);
+  overflow-y :scroll;
+  overflow-x : hidden;
+  flex-direction: column;
+}
+
+.EditProductCard{
+  display: flex;
+  max-width: 265px;
+  width: 100%;
+  height: 312px;
+  border: 1px solid rgba(208, 215, 222, 0.85);
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border-radius: 2%;
+  padding-top: 0;
+  margin: .5rem;
+}
+
+.EditProductCard img{
+  margin-top: 0px;
+  position:relative;
+  height: 40%;
+  width: 100%;
+}
+
+.EditProductCard li{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1%;
+}
+
+.EditProductCardWrapper{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  justify-content: center;
+  margin-top : 2px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px -6px #222;
+  height: 48%;
+  width: 100%;
+  align-items: center;
+  padding: 1%;
+}
+
+.EditProductCardWrapper:hover {
+  background: rgba(243, 240, 240, 0.3);
+  transition: all 500ms ease-in;
+}
+
+
+@media (max-width: 1000px) {
+  .EditProductCardWrapper{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: center;
+    margin-top : 2px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px -6px #222;
+    height: 70%;
+    width: 100%;
+    align-items: center;
+    padding: 2%;
+  }
+}
+
+.categoryDeleteBtn{
+  margin-left: auto;
+  margin-right: 1.5%;
+}
+
+/*Analysis */
+
+.AnalysisMainDiv{
+  background-color: white;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 2px solid rgba(208,215,222,0.48);
+  overflow-y:scroll;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222
+}
+
+/* Receipt  */
+
+
+.ReceiptMainDiv{
+  background: white;
+  border: 2px solid rgba(208,215,222,0.48);
+  overflow-y: scroll;
+  overflow-x : hidden;
+}
+/* Print Module */
+
+@media print {
+  .Print {
+      background-color: white !important;
+      height: 100% !important;
+      width: 100%  !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      margin: 0 !important;
+      padding: 15px !important;
+      font-size: 14px !important;
+      line-height: 18px !important;
+  }
+
+  ::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0) !important;
+	background-color: #f5f5f500 !important;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #f5f5f500 !important;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #f5f5f500 !important;
+	border: 1px solid #f5f5f500 !important;
+}
+
+.NoBorder{
+  border: none !important;
+}
+
+.INotPrintAble {
+  display: none !important;
+}
+
+.INotVisible{
+  opacity: 0 !important;
+}
+} /* Print */
