@@ -1,6 +1,6 @@
 {
-  "name": "yranapp",
-  "productName": "yranapp",
+  "name": "ElectronApp",
+  "productName": "ElectronApp",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".webpack/main",
@@ -81,7 +81,8 @@
     "node-loader": "^2.0.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^6.0.0",

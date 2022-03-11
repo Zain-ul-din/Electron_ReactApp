@@ -22,7 +22,7 @@ const App = () => {
     // Pragma once
     useEffect(()=>{
         let strRes = window.localStorage.getItem(SALEDPRODUCTSKEY)
-        console.log(strRes)
+
         let auxiliaryArray = JSON.parse(strRes)
         if(auxiliaryArray == null){
             SetSaledRecords([])
@@ -33,7 +33,7 @@ const App = () => {
 
     useEffect(()=>{
         let strRes = window.localStorage.getItem(CATEGORYKEY)
-        console.log(strRes)
+
         let auxiliaryArray = JSON.parse(strRes)
         if(auxiliaryArray == null) {
             SetCategorys([])
@@ -45,10 +45,9 @@ const App = () => {
 
     useEffect(() => {
         let strRes = window.localStorage.getItem(PRODUCTKEY)
-        console.log(strRes)
+
         let auxiliaryArray = JSON.parse(strRes)
         if(auxiliaryArray == null) {
-            console.log(strRes)
             SetProducts([])
             return
         }

@@ -24,7 +24,7 @@ const Analysis = (props) => {
             SetStartDate(lastIdx)
         }
     } , [])
-   console.log(props.saledRecord)
+
     let filterProducts = []
     let totalSold = 0 , soldPriceTotal = 0 , purchasePriceTotal = 0
 
